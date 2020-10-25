@@ -1,0 +1,102 @@
+// * {
+//   box-sizing: border-box;
+// }
+
+// body {
+//   margin: 0;
+//   font-family: Arial;
+// }
+
+// .header {
+//   text-align: center;
+//   padding: 12px;
+// }
+
+// .row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   padding: 0 4px;
+// }
+
+// .column {
+//   /* border: 1px solid #000; */
+//   flex: 25%;
+//   max-width: 25%;
+//   padding: 0 4px;
+// }
+// .superMain {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+// .aside {
+//   flex: 20%;
+//   max-width: 20%;
+// }
+// .section {
+//   flex: 80%;
+//   max-width: 80%;
+// }
+// .card {
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//   transition: 0.3s;
+//   width: 100%;
+// }
+// .aside .card {
+//   min-height: 200px;
+//   padding: 5px;
+//   background: #c7e1e2;
+// }
+// .container {
+//   padding: 2px 16px;
+// }
+
+// footer {
+//   background-color: #fff;
+//   position: relative;
+//   bottom: 0px;
+//   width: 100%;
+//   text-align: center;
+// }
+
+// /* Responsive layout - makes a two column-layout */
+// @media screen and (max-width: 1024px) {
+//   .aside {
+//     flex: 100%;
+//     max-width: 100%;
+//   }
+//   .aside .card {
+//     min-height: auto;
+//   }
+//   .section {
+//     flex: 100%;
+//     max-width: 100%;
+//   }
+//   .column {
+//     flex: 50%;
+//     max-width: 50%;
+//   }
+// }
+
+// /* Responsive layout - makes the mobile view */
+// @media screen and (max-width: 700px) {
+//   .aside {
+//     flex: 100%;
+//     max-width: 100%;
+//   }
+//   .section {
+//     flex: 100%;
+//     max-width: 100%;
+//   }
+//   .column {
+//     flex: 100%;
+//     max-width: 100%;
+//   }
+// }
+
+// @media screen and (min-width: 1440px) {
+//   body {
+//     justify-content: center;
+//     max-width: 1440px;
+//   }
+// }
+

@@ -1,0 +1,81 @@
+<div class="header">
+  <h1 class="mainHeading">SpaceX Launch Programs</h1>
+</div>
+<div class="superMain">
+  <div class="aside img-padd">
+    <div class="card">
+      <h3>Filters</h3>
+      <div class="sidebar-div">
+        <span class="sidebar-label">Launch Year</span>
+        <hr class="horizonatl-line">
+        <div class="row">
+          <div class="column1" *ngFor="let year of years;let i = index;">
+            <input type="button" value={{year}} (click)="filterData(filterObject['launch_year']= year)"
+              class="sidebar-btn-width button-color-light"
+              [ngClass]="{'button-color-dark':filterObject['launch_year'] === year}">
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-div">
+        <span class="sidebar-label">Successful Launch</span>
+        <hr class="horizonatl-line">
+        <div class="row">
+          <div class="column1">
+            <input type="button" value="True" (click)="filterData(filterObject['launch_success']= 'true')"
+              class="sidebar-btn-width button-color-light"
+              [ngClass]="{'button-color-dark':filterObject['launch_success'] === 'true'}">
+          </div>
+          <div class="column1">
+            <input type="button" value="False" (click)="filterData(filterObject['launch_success']= 'false')"
+              class="sidebar-btn-width button-color-light"
+              [ngClass]="{'button-color-dark': filterObject['launch_success'] === 'false'}">
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-div">
+        <span class="sidebar-label">Successful Landing</span>
+        <hr class="horizonatl-line">
+        <div class="row">
+          <div class="column1">
+            <input type="button" value="True" (click)="filterData(filterObject['land_success']= 'true')"
+              class="sidebar-btn-width button-color-light"
+              [ngClass]="{'button-color-dark': filterObject['land_success'] === 'true'}">
+          </div>
+          <div class="column1">
+            <input type="button" value="False" (click)="filterData(filterObject['land_success']= 'false')"
+              class="sidebar-btn-width button-color-light"
+              [ngClass]="{'button-color-dark': filterObject['land_success'] === 'false'}">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="section">
+    <div class="row">
+      <div class="column img-padd" *ngFor="let item of listItem">
+        <div class="card img-padd">
+          <ng-container>
+            <img src="{{ item.links.mission_patch_small }}" alt="Avatar" class="img-padd sidebar-btn-width img-back" />
+            <div class="container">
+              <h4><b class="detail-head">{{ item.mission_name }} # {{ item.flight_number }}</b></h4>
+              <p class="detail-text">Mission Ids:</p>
+              <li *ngFor="let id of item.mission_id" class="mission-list">{{ id }}</li>
+              <label class="detail-text detail-top-dif">Launch Year:</label>
+              <span class="detial-label-text"> {{ item.launch_year }}</span> <br />
+              <label class="detail-text detail-top-dif">SuccessFul Launch:</label>
+              <span class="detial-label-text"> {{ item.launch_success }}</span><br />
+              <label class="detail-text detail-top-dif">SuccessFul Landing:</label>
+              <span class="detial-label-text"> {{ item.tbd }}</span>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<footer align="center" style="font-weight: 600">
+  <p>Developed By: Durgesh Chandra Pandey</p>
+</footer>

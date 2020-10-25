@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+/* Style the body */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #ece9e9;
+}
+
+.header {
+  text-align: center;
+  padding: 12px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.superMain{
+  display: flex;
+  flex-wrap: wrap;
+}
+.mainHeading{
+  text-align: left;
+}
+.aside {
+  flex: 20%;
+  max-width: 18%;
+}
+.section {
+  flex: 80%;
+  max-width: 80%;
+} 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  margin-left: 1%;
+  background-color: #ffffff;
+}
+.aside .card {
+  min-height: 200px;
+  padding: 5px;
+  background: #ffffff;
+}
+.container {
+  padding: 2px 2px;
+}
+.img-padd{
+  padding: 5px;
+}
+.img-back{
+  background-color: #ece9e9;
+}
+
+.sidebar-label {
+  margin-left: 30%;
+}
+.sidebar-div {
+  margin-left: 5%;
+}
+.mission-list{
+  margin-left: 15%;
+}
+
+.horizonatl-line{
+  width: 50%;
+}
+.floated-left {
+  float:left;
+  margin-right:5px;
+}
+.column1 {
+float: left;
+width: 50%;
+padding: 10px;
+
+}
+.sidebar-btn-width{
+width: 100%;
+}
+.button-color-light{
+background-color: #73d073;
+  border: 1px solid #73d073;
+  border-radius: 5px;
+}
+.button-color-dark{
+background-color: #54a02d;
+  border: 1px solid #54a02d;
+  border-radius: 5px;
+}
+
+.detail-text{
+  font-weight: 600;
+}
+.detail-head{
+  color: #946fa7;
+  font-weight: 600;
+}
+.detial-label-text{
+  color: #946fa7;
+}
+.detail-top-dif{
+  margin-top: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+ /* Responsive layout - makes a two column-layout */
+ @media screen and (max-width: 1024px) {
+  .aside {
+      flex: 100%;
+      max-width: 100%;
+  }
+  .aside .card {
+      min-height: auto;
+  }
+  .section {
+      flex: 100%;
+      max-width: 100%;
+  } 
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .column1 {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the mobile view */
+@media screen and (max-width: 700px) {
+  .aside {
+      flex: 100%;
+      max-width: 100%;
+  }
+  .section {
+      flex: 100%;
+      max-width: 100%;
+  } 
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+@media screen and (min-width: 1440px) {
+  body {
+    justify-content: center;
+    max-width: 1440px;
+  }
+}
